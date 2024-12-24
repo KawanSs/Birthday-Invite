@@ -7,13 +7,27 @@
     border-radius: 10px;
     &__items{
         display: flex;
+        justify-content: center;
         &__item{
+            max-width: 300px;
+            text-align: center;
             color: @black;
             font-weight: bold;
             margin: 16px;
             padding: 0 16px 0 16px;
             font-size: 16px;
-            cursor: pointer;
+            button{
+                background-color: @black;
+                border: none;
+                color: @white;
+                padding: 8px;
+                border-radius: 8px;
+                transition: all ease 1s;
+                &:hover{
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
         }
     }
 }
