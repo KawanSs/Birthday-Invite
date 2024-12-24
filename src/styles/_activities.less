@@ -1,9 +1,15 @@
 .activities{
     display: flex;
     justify-content: center;
+    @media @breakpointMobile{
+        display: block;
+    }
     &__items{
         display: flex;
         justify-content: space-between;
+        @media @breakpointMobile{
+            display: block;
+        }
         &__item{
             padding: 16px;
             &__header{

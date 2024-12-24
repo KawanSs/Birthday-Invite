@@ -5,6 +5,9 @@
     margin: 64px 0;
     border: 2px solid @black;
     border-radius: 10px;
+    @media @breakpointMobile{
+        display: block;
+    }
     &__items{
         display: flex;
         justify-content: center;
@@ -16,18 +19,41 @@
             margin: 16px;
             padding: 0 16px 0 16px;
             font-size: 16px;
-            button{
+            @media @breakpointMobile{
+                font-size: 12px;
+                padding: 0 8px 0 8px;
+                margin: 4px;
+            }
+            #button_pc{
                 background-color: @black;
                 border: none;
                 color: @white;
                 padding: 8px;
                 border-radius: 8px;
                 transition: all ease 1s;
+                @media @breakpointMobile{
+                    padding: 8px;
+                    display: none;
+                }
                 &:hover{
                     cursor: pointer;
                     transform: scale(1.1);
                 }
             }
+        }
+    }
+    #button_mobile{
+        display: none;
+        @media @breakpointMobile{
+        display: inline;
+        font-size: 12px;
+        margin: 8px;
+        background-color: @black;
+        border: none;
+        color: @white;
+        border-radius: 8px;
+        transition: all ease 1s;
+        padding: 8px;
         }
     }
 }
